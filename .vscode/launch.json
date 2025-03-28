@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "type": "node",
+          "request": "launch",
+          "name": "Debug Backend",
+          "program": "${workspaceFolder}/using-js/backend/server.js",
+          "outFiles": ["${workspaceFolder}/**/*.js"],
+          "runtimeArgs": ["--nolazy"],
+          "console": "integratedTerminal"
+      },
+      {
+          "type": "chrome",
+          "request": "launch",
+          "name": "Debug Frontend",
+          "url": "https://localhost:3000",
+          "webRoot": "${workspaceFolder}/using-js/frontend",
+          "sourceMapPathOverrides": {
+            "meteor://💻app/*": "${workspaceFolder}/*",
+            "webpack:///./~/*": "${workspaceFolder}/node_modules/*",
+            "webpack://?:*/*": "${workspaceFolder}/using-js/frontend/*"
+          },
+          "sourceMaps": true
+      }
+  ]
+}

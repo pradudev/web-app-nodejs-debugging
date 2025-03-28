@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",(()=>{ko.applyBindings(new function(){var o=this;o.products=ko.observableArray([]),fetch("/api/products").then((o=>o.json())).then((t=>o.products(t))).catch((o=>console.error("Error fetching products:",o)))})}));
+//# sourceMappingURL=bundle.js.map
