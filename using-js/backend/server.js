@@ -38,6 +38,6 @@ const server = https.createServer({
 
 
 // Start the server
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on https://localhost:${PORT}`);
 });
